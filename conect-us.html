@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contect-us.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+
+
+
+
+
+    
+    <div class="container">
+        <div class="contact-info">
+            <h2>Reach Us</h2>
+            <p>If you have any general or admission inquiries, feel free to contact us. Our team will respond as soon as possible.</p>
+            <address>
+                <strong>Address:</strong> My College, Kalyan East, Dist. Thane (MAH), India - 421 306<br>
+                <strong>Phone:</strong> +91-7208225873<br>
+                <strong>Email:</strong> <a href="harshgupta00034@gmail.com">HarshGupta00034@gmail.com</a><br>
+                <strong>Opening Hours:</strong> Mon - Sat: 10:00 - 6:00
+            </address>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Drop Us a Message</h2>
+            <form id="contactForm" action="https://formsubmit.co/arvindgupta3034@gmail.com" method="post" onsubmit="myFunction()">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Full Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="degree">Degree you are Applying For:</label>
+                <select id="degree" name="degree">
+                    <option value="Bachelors">Bachelors</option>
+                    <option value="Masters">Masters</option>
+                </select>
+
+                <label for="major">Field/Major:</label>
+                <input type="text" id="major" name="major" required>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="notification"></div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+alert("Thank you! Your message has been successfully sent. ...");
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 60px; /* Adding padding to make space for the fixed news ticker */
+    background-color:  #f0f0f0;
+}
+
+header {
+    background-color: #0056b3;
+    padding: 10px;
+    color: black;
+    text-align: center;
+    position: relative;
+    z-index: 500; /* Keeps the header below the news ticker */
+    margin-top: 0px auto; /* Ensures the header is visible below the ticker */
+}
+
+
+.container {
+    display: flex;
+    align-items: center; /* Align vertically center */
+    justify-content: space-between; /* Add space between the logo and button */
+    padding: 10px;
+}
+
+/* sticky style */
+.sticky{
+
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+}
+
+.sticky-log{
+
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+
+.logo{
+    height: 50px;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: aliceblue;
+    
+}
+.login-btn {
+    background-color: #0056b3; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* only one navebar of home */
+.login-btn1 {
+    background-color: #ec1818; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.login-btn:hover {
+    background-color: #ec1818;
+}
+
+.container{
+    background-color: #494949;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 10px;
+}
+
+/* News Ticker Styling */
+.news-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+    background-color: #0056b3;
+
+}
+
+.news-container .title {
+    position: absolute;
+    background: #df2020;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 10s infinite linear;
+    
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: white;
+    position: relative;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
+
+/* Welcome Section */
+.welcome-section {
+    
+    background-size: cover;
+    text-align: center;
+    padding: 200px 0;
+    color: white;
+    background-position: center;
+    font-weight: 300px;
+    background-image: url(imagecolage.jpg);
+}
+
+.welcome-section h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Information Section */
+
+
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+.info-section i{
+    color: red;
+    font-size: 14px;
+}
+
+
+
+.info-section div {
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(250, 246, 246, 0.1);
+    font-weight: 400;
+    text-align: center;
+    font-size: 17px;
+    line-height: 16px;      /* word size */
+   margin-bottom: 10px;
+    color: white;
+}
+.info-section ul li{
+     margin-bottom: 20px;
+     width: 100%;
+     float: left;
+     
+}
+
+.info-section h3 {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.info-section p {
+    padding: 10px;
+}
+
+.info-section p {
+    padding: 10px;
+}
+
+
+
+
+.info-section .recent-event{
+    background-image: url(event2.png);
+}
+.info-section .campus-news{
+    background-image: url(event2.png);
+}
+.info-section .event-calendar{
+    background-image: url(event2.png);
+}
+/* compus news */
+.campus-news span{
+    width: 80px;
+    float: left;
+}
+.campus-news h2{
+    font-weight: 600;
+    font-size: 16px;
+
+}
+.campus-news h6{
+    font-weight: 500;
+    font-size: 13px;
+    color: red;
+}
+.campus-news p{
+    font-size: 14px;
+}
+
+
+.info-section .event-calendar span {
+    color: red;
+    font-weight: 700; /* Bold for highlighted dates */
+}
+
+/* Responsive Design */
+/* Base styles for layout */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox setup for .info-section */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.info-section div {
+    margin-bottom: 20px;
+}
+
+/* Styles for navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Welcome section title styling */
+.welcome-section h2 {
+    font-size: 36px;
+}
+
+/* MEDIA QUERIES */
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+    .info-section {
+        flex-wrap: wrap;
+    }
+
+    .info-section div {
+        width: 45%; /* Adjust width of items */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Slight margin for navigation items */
+    }
+
+    .welcome-section h2 {
+        font-size: 36px;
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+    }
+
+    .info-section {
+        flex-direction: column; /* Stack .info-section items */
+        align-items: center;
+    }
+
+    .info-section div {
+        width: 80%; /* Increase width on smaller screens */
+    }
+
+    .welcome-section {
+        padding: 60px 0; /* Padding for spacing */
+    }
+
+    .welcome-section h2 {
+        font-size: 32px; /* Adjust font size for mobile */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .welcome-section h2 {
+        font-size: 28px; /* Smaller title font size */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Adjust logo size */
+    }
+
+    .info-section div {
+        width: 100%; /* Full width for each item */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add margin between nav items */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust font size for links */
+    }
+
+    .news-items p {
+        font-size: 14px; /* Adjust text size for news items */
+    }
+
+    .news-title {
+        font-size: 16px; /* Adjust news title size */
+    }
+}
+
+
+
+/* about us */
+
+.container1 {
+    max-width: 12000px;
+    margin: 0 auto;
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    margin-top: 80px;
+    left: 0;
+    right: 0;
+}
+.text-content1 {
+    flex: 1;
+    padding-right: 20px;
+}
+.text-content1 h1 {
+    color: blue;
+}
+.text-content1 h4 {
+    color: red;
+}
+.text-content1 p {
+    line-height: 1.6;
+    color: #333;
+}
+.text-content1 a {
+    color: purple;
+    text-decoration: none;
+}
+.text-content1 a:hover {
+    text-decoration: underline;
+}
+.image1 {
+    flex: 1;
+}
+.image1 img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-content1 {
+        padding-right: 0;
+        text-align: center;
+    }
+    .image1 {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+/* certificate */
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.section {
+    width: 30%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section h2 {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 25%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.award-image, .certificate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Testimonial Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Partners Section */
+.partners {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    width: 100px;
+    height: auto;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f0f3fa;
+    color: #1b1818;
+    text-align: center;
+    padding: 40px 0px;
+    width: 100%;
+    
+}
+
+.footer-logo{
+    height: 70px;
+    width: auto;
+
+}
+.footer-sect{
+width: 100%;
+text-align: center;
+margin-top: 20px;
+font-size: 16px;
+}
+.footer-sect a{
+    color: #202020;
+    margin-left: 10px;
+    text-decoration-line: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-container, .gallery-container, .partner-logos {
+        flex-direction: column;
+    }
+
+    .testimonial, .gallery-container img, .partner-logos img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.Copyright{
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
