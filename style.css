@@ -318,7 +318,7 @@ nav ul li {
 /* MEDIA QUERIES */
 
 /* For screens smaller than 1024px */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .info-section {
         flex-wrap: wrap;
     }
@@ -337,7 +337,8 @@ nav ul li {
 }
 
 /* For screens smaller than 768px */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+    
     nav ul {
         flex-direction: column; /* Stack nav items */
     }
