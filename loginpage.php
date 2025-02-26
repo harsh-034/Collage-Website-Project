@@ -13,20 +13,18 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="loginForm" action="index.html" method="post" onsubmit="myFunction()">
+        <form id="loginForm" action="actions/login.php" method="post" onsubmit="myFunction()">
             <div class="input-group">
                 <label for="username"> <ion-icon name="person-circle-outline"></ion-icon> Email ID</label>
-                <input type="text" id="username" name="username" placeholder="username">
+                <input type="text" id="email" name="email" placeholder="username">
             </div>
             <div class="input-group">
                 <label for="password"><ion-icon name="shield-half-outline"></ion-icon> Password</label>
                 <input type="password" id="password" name="password" required placeholder="Password">
             </div>
-            <div>               
-                <input type="checkbox" id="checkbox" name="chakebox" required >click required
-            </div>
+            
             <div class="button-group">
-                <button type="submit">Login</button>
+                <button type="submit" name="login">Login</button>
                 <button type="reset">reset</button>
             </div>
         </form>
