@@ -33,11 +33,11 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         function myFunction() {
 alert("Succeful Login . ...");
         }
-     </script>
+     </script> -->
 </body>
 
 </html>

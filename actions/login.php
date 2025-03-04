@@ -27,6 +27,7 @@
       header('Location: ../admin/dist/pages/dishboard.php');//login location
     }
     else {
-      echo 'Invailid Credentials'; //invalid loction
+      echo 'invalid user'; //invalid loction
     }
   }
+  ?>

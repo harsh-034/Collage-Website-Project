@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(banner.jpg) ;
+    font-family: Arial, sans-serif;
+    background-position: center;
+}
+
+.login-container {
+    /* background: transparent; */
+    color: white;
+    border-radius: 5px 90px 5px 90px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  border-color: #fff;
+
+}
+
+h2 {
+    margin-bottom: 2px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between; /* spce a liya use  hoth hai center a liya bhi use hota hai */
+}
+
+button {
+    width: 48%;
+    padding: 10px;                  
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"] {
+    background-color: #007bff;     /*button are use in normal color*/ 
+    color: #fff;
+}
+button[type="submit"]:hover {         /* button pe click karne e bad coller chaange hoa hai */
+    background-color: #0056b3;
+}
+
+
+button[type="reset"] {
+    background-color: #6c757d;      /* reset button are use in normal color*/
+    color: #fff;
+}
+button[type="reset"]:hover {
+    background-color: #5a6268;      /* reaset button pe click karne e bad coller chaange hoa hai */
+}
+a{
+    text-decoration: none;  
+}
+
+#message {
+    margin-top: 15px;
+    color: red;
+}
+.php1{
+    color: red;
+}

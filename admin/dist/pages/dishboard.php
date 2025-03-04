@@ -5,10 +5,11 @@ if (!isset($_SESSION['login']))
  
 }
 else{
-  header("Location: http://localhost/sms/school-management-system/login.php");
+  header("Location:../../../loginpage.php");
   exit();
 }
 ?>
+
 
 
 <!doctype html>
@@ -16,7 +17,7 @@ else{
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE | Dashboard v2</title>
+    <title>Admin | Dashboard</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="AdminLTE | Dashboard v2" />
@@ -81,6 +82,13 @@ else{
             </li>
             <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Home</a></li>
             <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Contact</a></li>
+            <ul class="navbar-nav ms-auto">
+            <!--begin::Navbar Search-->
+            <li class="nav-item">
+              <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                <i class="bi bi-search"></i>
+              </a>
+            </li>
           </ul>
           <!--end::Start Navbar Links-->
           <!--begin::End Navbar Links-->
@@ -564,7 +572,23 @@ else{
               </li>
             </ul>          
           </li>
-              
+          <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>
+                    registered
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="registered.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Student registered login page</p>
+                </a>
+              </li>
+            </ul> 
+              </li>
             </ul>
             <!--end::Sidebar Menu-->
           </nav>
