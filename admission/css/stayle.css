@@ -6,10 +6,7 @@
   font-family: bold;
   src: url(../Poppins/Poppins-Bold.ttf);
 }
-  *{
-    /* overflow: hidden; */
-    /* border: 1px solid yellow; */
-  }
+
   body{
     background-image: linear-gradient(rgba(4,9,30,0.6),rgba(4,9,30,0.6)),url(background.jpg);
     background-position: center;
