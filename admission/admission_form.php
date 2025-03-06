@@ -30,7 +30,7 @@ if(!isset($_SESSION['user_name'])){
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container">
 		<a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-    <img src="../logo.png" alt="Logo" width="200" height="40" class="d-inline-block me-2">
+   <a href="../index.html"><img src="../logo.png" alt="Logo" width="200" height="40" class="d-inline-block me-2"></a>
    
 </a><!-- logo -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
