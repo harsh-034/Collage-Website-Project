@@ -13,8 +13,8 @@ if(isset($_POST['form_submit']))
 	$course=trim($_POST['course']);
 	$email=trim($_POST['email']);
 	$mobile=trim($_POST['mobile']);
-	$pay_status='Paid'; 
-	$course_fees='6000'; 
+	$pay_status='UnPaid'; //unpaid in print
+	$course_fees='100'; //fees only 100rs
 	$reg_no='TS'.rand(99,10).time();
 	$folder = "uploads/";//<!--upldoads file store in all image-->
 	//Photo 
