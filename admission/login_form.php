@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             // Check password
             if (md5($password) === $row['password']) {  
                 $_SESSION['user_name'] = $row['name'];
-                header('Location: user_page.php');
+                header('Location: admission_form.php');
                 exit();
             } else {
                 $error = "Incorrect email or password!";

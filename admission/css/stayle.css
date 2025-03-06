@@ -150,6 +150,20 @@ position: relative;
 width: 100%;
 }
 
+  .r_form .input_wrap .input_item .span{
+    width: 100%;
+    border-radius: 3px;
+    height: 40px;
+    border: 2px solid var(--input-bg);
+    background: var(--input-bg);
+    padding: 10px 20px;
+    padding-left: 50px;
+    transition: 0.5s ease;
+    color: var(--secondary);
+    border-color: var(--bordcolor);
+    }
+    
+
 .r_form .input_wrap .input_item .input{
 width: 100%;
 border-radius: 3px;
