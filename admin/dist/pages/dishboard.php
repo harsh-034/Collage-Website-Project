@@ -280,9 +280,9 @@ else{
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="./index.html" class="brand-link">
+          <a href="/../../../index.html" class="brand-link">
             <!--begin::Brand Image-->
-            <img
+            <img 
               src="../../dist/assets/img/AdminLTELogo.png"
               alt="AdminLTE Logo"
               class="brand-image opacity-75 shadow"
@@ -306,7 +306,7 @@ else{
               role="menu"
               data-accordion="false"
              >
-              <li class="nav-item menu-open">
+              <li class="nav-item has-treeviewn">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
@@ -317,7 +317,7 @@ else{
               </li>
 
 
-              <li class="nav-item has-treeview">
+              <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-users"></i>
               <p>
@@ -585,6 +585,14 @@ else{
                 <a href="registered.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Student registered login page</p>
+                </a>
+              </li>
+            </ul> 
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="addmision_rig_form.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Admission Form</p>
                 </a>
               </li>
             </ul> 

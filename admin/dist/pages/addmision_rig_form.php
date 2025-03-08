@@ -1,6 +1,8 @@
 <?php
-include(__DIR__ . "/../../../admission/config.php");
+include(__DIR__ . "/../../../admission/congif2.php");
 ?>
+
+
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
@@ -45,9 +47,21 @@ include(__DIR__ . "/../../../admission/config.php");
       crossorigin="anonymous"
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
+
+
+
+    <!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="../../dist/css/adminlte.css" />
     <!--end::Required Plugin(AdminLTE)-->
+
+
+    
     <!-- apexcharts -->
     <link
       rel="stylesheet"
@@ -299,11 +313,6 @@ include(__DIR__ . "/../../../admission/config.php");
                   </p>
                 </a>
               </li>
-
-
-           
-              
-
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
@@ -314,15 +323,15 @@ include(__DIR__ . "/../../../admission/config.php");
                 </a>
                 <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="registered.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Student registered login page</p>
                 </a>
               </li>
             </ul> 
-            <ul class="nav nav-treeview">
+            <ul class="nav nav-treeview has-treeview">
               <li class="nav-item">
-                <a href="addmision_rig_form.php" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Admission Form</p>
                 </a>
@@ -331,18 +340,8 @@ include(__DIR__ . "/../../../admission/config.php");
               </li>
 
 
-          
-         
 
-          <!-- Examination -->
-          
-
-          <!-- Attendance -->
-          
-         
-     
-         
-   
+              
               
             </ul>
             <!--end::Sidebar Menu-->
@@ -365,7 +364,7 @@ include(__DIR__ . "/../../../admission/config.php");
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="dishboard.php">Admin</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">registered</li>
+                  <li class="breadcrumb-item active" aria-current="page">Admission Form</li>
                 </ol>
               </div>
             </div>
@@ -377,28 +376,39 @@ include(__DIR__ . "/../../../admission/config.php");
        
        </main>
        <!--end::App Main-->
-       <!------------------start------------------------->
+       <!------------------start------------------------>
       
-      <div class="container mt-4">
-        <h4>Registered Students in Login Page</h4>
+             <div class="container mt-4">
+        <h4>Registered Students in Admission form 2025 </h4>
         <table id="myTable" class="table table-striped table-bordered">
           <thead>
             <tr>
               <th>Id</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Status</th>
+              <th>Registration No</th>
+              <th>Full Name</th>
+              <th>Father Name</th>
+              <th>Mother Name</th>
+              <th>Address</th>
+              <th>Email ID</th>
+              <th>Mobile No </th>
+              <th>DOB</th>
+              <th>Ctaegory</th>
+              <th>Gender</th>
+              <th>Course</th>
+              <th>Fees</th>
+              <th>Payment Status</th>           
+              <th>image</th>
+              <th>sign_image</th>
               <th>Action</th>
             </tr>
           </thead> <!-- ✅ Open tbody once -->
           
           <?php
         
-        include(__DIR__ . "/../../../admission/config.php");
+        include(__DIR__ . "/../../../admission/congif2.php");
         // Ensure database connection is included
 
-        $query = "SELECT * FROM user_form";
+        $query = "SELECT * FROM registrations";
         $query_run = mysqli_query($conn, $query);
 
         if(mysqli_num_rows($query_run) > 0)
@@ -411,23 +421,58 @@ include(__DIR__ . "/../../../admission/config.php");
               <?php echo htmlspecialchars($row['id']); ?>
             </td>
             <td>
+              <?php echo htmlspecialchars($row['reg_no']); ?>
+            </td>
+            <td>
               <?php echo htmlspecialchars($row['name']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['fname']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['mname']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['address']); ?>
             </td>
             <td>
               <?php echo htmlspecialchars($row['email']); ?>
             </td>
             <td>
-              <?php echo htmlspecialchars($row['password']); ?>
+              <?php echo htmlspecialchars($row['mobile']); ?>
             </td>
             <td>
-              <?php echo htmlspecialchars($row['user_type']); ?>
+              <?php echo htmlspecialchars($row['dob']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['category']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['gender']); ?>
+            </td>  
+            <td>
+              <?php echo htmlspecialchars($row['course']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['course_fees']); ?>
+            </td> 
+            <td>
+              <?php echo htmlspecialchars($row['pay_status']); ?>
+            </td>          
+            
+            <td>
+              <?php echo htmlspecialchars($row['image']); ?>
+            </td>
+            <td>
+              <?php echo htmlspecialchars($row['sign']); ?>
             </td>
             <td>
             <!-- <button type="button" value="" class="btn ">Edite</button> -->
-            <a href="registered.php?id=<?php echo htmlspecialchars($row['id']); ?>" 
+            <a href="addmision_rig_form.php?id=<?php echo htmlspecialchars($row['id']); ?>" 
        class="btn btn-danger btn-sm deletebtn">
         Delete
     </a>
+             
 </td>
 
             </td>
@@ -467,22 +512,19 @@ include(__DIR__ . "/../../../admission/config.php");
       <!--end::Footer-->
     </div>
     
-   
+    <script src="/DataTables/datatables.js"></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
     <script src="../../dist/js/adminlte.js"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
-    
-<script src="/DataTables/datatables.js"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-<script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script>
   $(document).ready(function () {
     $('#myTable').DataTable();
   });
 </script>
+
+
+
     
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
   </body>
